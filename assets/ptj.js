@@ -88,7 +88,8 @@ modalCloses.forEach((modalClose) => {
 /*======================= Portfolio Swiper ===================*/
 var swiper = new Swiper(".portfolio__container", {
   cssMode: true,  
-  loop: true,    
+  loop: true,
+  rewind: true,    
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -101,11 +102,7 @@ var swiper = new Swiper(".portfolio__container", {
   mousewheel: true, // Enables mousewheel support
 });
 
-document.querySelector(".swiper-button-next").addEventListener("click", function () {
-  if (swiper.isEnd) {
-    swiper.slideTo(1); // Go back to the first slide
-  }
-});
+
 
 
 
