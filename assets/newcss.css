@@ -195,6 +195,7 @@ img {
   color: var(--first-color);
 }
 .nav__toggle {
+
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -207,13 +208,16 @@ img {
     bottom: -100%;
     left: 0;
     width: 100%;
-    background-color: var(--body-color);
+    background-color: #011428;
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: 0.3s;
   }
+
+
 }
+
 .nav__list {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -1175,7 +1179,9 @@ img {
   .footer__container {
     padding: 0;
   }
-
+  .nav{
+    padding: 2rem 2rem;
+  }
   .home__blob {
     width: 280px;
   }
