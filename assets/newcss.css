@@ -188,7 +188,12 @@ img {
 .nav__toggle {
   color: white;
   font-weight: bold;
-  font-size: 20px;
+}
+
+.nav__logo{
+  color: white;
+  font-weight: bold;
+  font-size: 20px; 
 }
 
 .nav__logo:hover {
@@ -197,10 +202,14 @@ img {
 .nav__toggle {
   font-size: 1.1rem;
   cursor: pointer;
+  display: none;
 }
+
+
 .nav__toggle:hover {
   color: var(--first-color);
 }
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -214,6 +223,7 @@ img {
     transition: 0.3s;
   }
 }
+
 .nav__list {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -930,6 +940,7 @@ img {
 /* For Small Devices */
 @media screen and (max-width: 350px) {
   .container {
+    /* width: 100%; */
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
@@ -977,6 +988,7 @@ img {
   .project__img {
     width: 200px;
   }
+
 }
 
 /* For medium Devices */
@@ -1044,8 +1056,7 @@ img {
   }
 
   .nav__icon,
-  .nav__close,
-  .nav__toggle {
+  .nav__close {
     display: none;
   }
 
@@ -1192,3 +1203,9 @@ img {
     bottom: -4.5rem;
   }
 }
+
+
+
+
+
+
