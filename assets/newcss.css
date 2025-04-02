@@ -90,7 +90,7 @@ body.dark-theme {
 
 .change-theme {
   font-size: 1.25rem;
-  color: var(--title-color);
+  color: white;
   margin-right: var(--mb-1);
   cursor: pointer;
 }
@@ -152,7 +152,8 @@ img {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 1000px;
+  width: 100%;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -172,11 +173,11 @@ img {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  background-color: #011428;
 }
 
 .nav {
-  max-width: 968px;
+  max-width: 1200px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -185,7 +186,7 @@ img {
 
 .nav__logo,
 .nav__toggle {
-  color: var(--title-color);
+  color: white;
   font-weight: bold;
   font-size: 20px;
 }
@@ -222,7 +223,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--title-color);
+  color: white;
   font-weight: var(--font-medium);
   font-size: 14px;
 }
@@ -849,17 +850,18 @@ img {
 }
 
 .footer__link:hover {
-  color: var(--first-color-lighter);
+  /* font-weight: bold; */
+  color: #00193b;
   transition: 0.3s;
 }
 
 .footer__social {
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   margin-right: var(--mb-1-5);
 }
 
 .footer__social:hover {
-  color: var(--first-color-lighter);
+  color:  #00193b;
   transition: 0.3s;
 }
 
@@ -875,6 +877,7 @@ img {
 .footer__subtitle,
 .footer__social {
   color: #fff;
+  font-weight: bold;
 }
 
 /*==================== Scroll Up ==================*/
