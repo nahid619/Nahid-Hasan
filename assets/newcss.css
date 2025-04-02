@@ -152,7 +152,7 @@ img {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
@@ -177,7 +177,7 @@ img {
 }
 
 .nav {
-  max-width: 1300px;
+  max-width: 1320px;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
