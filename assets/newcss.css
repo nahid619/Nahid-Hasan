@@ -203,7 +203,9 @@ img {
 .nav__toggle:hover {
   color: var(--first-color);
 }
-@media screen and (max-width: 767px) {
+
+/*  1072*/
+@media screen and (max-width: 867px) {
   .nav__menu {
     position: fixed;
     bottom: -100%;
@@ -1063,11 +1065,12 @@ img {
   }
 
 
-
-
 }
 
-@media screen and (min-width: 768px) {
+
+
+/* 207*/
+@media screen and (min-width: 868px) {
   .container {
     margin-left: auto;
     margin-right: auto;
