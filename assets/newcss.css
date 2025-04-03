@@ -460,6 +460,7 @@ img {
   color: var(--first-color);
 }
 
+
 .skills__icon {
   margin-right: var(--mb-0-75);
 }
@@ -944,9 +945,9 @@ img {
 /* For Small Devices */
 @media screen and (max-width: 368px) 
 {
-  .container {
-    margin-left: var(--mb-1);
-    margin-right: var(--mb-1);
+  .container
+  {
+    margin: auto;
     width: 90%;
   }
 
@@ -955,7 +956,8 @@ img {
     margin: auto;
   }
 
-  .nav__menu {
+  .nav__menu 
+  {
     padding: 2rem 0.25rem 4rem;
   } 
 
@@ -1003,12 +1005,16 @@ img {
     margin-bottom: 0;
   }
 
-
+}
+.skills__container
+{
+  gap: 2rem;
 }
 
 /* For medium Devices */
 @media screen and (min-width: 568px) {
-  .home__content {
+  .home__content 
+  {
     grid-template-columns: max-content 1fr 1fr;
   }
 
@@ -1039,6 +1045,10 @@ img {
     grid-template-columns: repeat(2, 1fr);
     
   }
+  /* .skills__container
+  {
+    gap: 2rem;
+  } */
 
   .qualification__section {
     display: grid;
