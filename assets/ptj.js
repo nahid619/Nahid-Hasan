@@ -1,6 +1,7 @@
 const navMenu = document.getElementById("nav-menu"),
   navToggle = document.getElementById("nav-toggle");
 navClose = document.getElementById("nav-close");
+
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show-menu");
@@ -16,7 +17,8 @@ if (navClose) {
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll(".nav__link");
 
-function linkAction() {
+function linkAction() 
+{
   const navMenu = document.getElementById("nav-menu");
   // When we click on each nav__link, we remove the show-menu class
   navMenu.classList.remove("show-menu");
@@ -28,7 +30,8 @@ navLink.forEach((n) => n.addEventListener("click", linkAction));
 const skillsContent = document.getElementsByClassName("skills__content"),
   skillsHeader = document.querySelectorAll(".skills__header");
 
-function toggleSkills() {
+function toggleSkills() 
+{
   let itemClass = this.parentNode.className;
 
   for (i = 0; i < skillsContent.length; i++) {
@@ -67,7 +70,8 @@ const modalViews = document.querySelectorAll(".services__modal"),
   modalBtns = document.querySelectorAll(".services__button"),
   modalCloses = document.querySelectorAll(".services__modal-close");
 
-let modal = function (modalClick) {
+let modal = function (modalClick) 
+{
   modalViews[modalClick].classList.add("active-modal");
 };
 
@@ -109,7 +113,8 @@ var swiper = new Swiper(".portfolio__container", {
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll("section[id]");
 
-function scrollActive() {
+function scrollActive() 
+{
   const scrollY = window.pageYOffset;
 
   sections.forEach((current) => {
@@ -117,21 +122,21 @@ function scrollActive() {
     const sectionTop = current.offsetTop-150;
     const sectionId = current.getAttribute("id");
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
+      {
+        document.querySelector(".nav__menu a[href*=" + sectionId + "]").classList.add("active-link");
+    } 
+    else 
+    {
+      document.querySelector(".nav__menu a[href*=" + sectionId + "]").classList.remove("active-link");
     }
   });
 }
 window.addEventListener("scroll", scrollActive);
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
-function scrollHeader() {
+function scrollHeader() 
+{
   const nav = document.getElementById("header");
   // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
   if (this.scrollY >= 80) nav.classList.add("scroll-header");
@@ -139,8 +144,11 @@ function scrollHeader() {
 }
 window.addEventListener("scroll", scrollHeader);
 
+
+
 /*==================== SHOW SCROLL up ====================*/
-function scrollUp() {
+function scrollUp()
+{
   const scrollUp = document.getElementById("scroll-up");
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
   if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
