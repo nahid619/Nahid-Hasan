@@ -171,14 +171,6 @@ img {
   display: grid;
   gap: 1.5rem;
 }
-/* .header {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: #011428;
-} */
 
 .header {
   width: 100%;
@@ -203,7 +195,7 @@ img {
 .nav__toggle {
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .nav__logo:hover {
@@ -281,6 +273,10 @@ img {
 /* Active Link */
 .active-link {
   color: var(--first-color-second);
+  padding: 0 8px;
+  border-radius: 5px;
+  background-color: #011428;
+  font-weight: bolder;
 }
 
 /* Change Background header */
@@ -369,10 +365,11 @@ img {
   font-size: 1.25rem;
 }
 
-/*================== Buttons ===================*/
+/*================== Buttons ====================================*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
+  background-image: url(./img/navigation2.svg);
   color: #fff;
   padding: 1rem;
   margin-bottom: 10px;
@@ -954,6 +951,7 @@ img {
 .footer__bg {
   background-color: var(--first-color);
   /* background-color: #0f9f1e; */
+  background-image: url(./img/navigation2.svg);
   padding: 2rem 0 3rem;
 }
 
@@ -1009,7 +1007,7 @@ img {
   position: fixed;
   right: 1rem;
   bottom: -20%;
-  background-color: var(--first-color);
+  background-color: var(--first-color-alt);
   opacity: 0.8;
   padding: 0 0.3rem;
   border-radius: 0.4rem;
