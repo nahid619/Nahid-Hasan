@@ -447,7 +447,7 @@ img {
   justify-content: center;
 }
 
-/*===================== SKILLS =========================*/
+/*===================== SKILLS ==============================*/
 
 .skills__container {
   row-gap: 0;
@@ -456,7 +456,7 @@ img {
 .skills__header {
   display: flex;
   align-items: center;
-  margin-bottom: var(--mb-2-5);
+  margin-bottom: 2rem;
   cursor: pointer;
 }
 
@@ -466,6 +466,16 @@ img {
   color: var(--first-color);
 }
 
+.skills__list
+{
+  gap: 0;
+}
+
+/* .skill_section_gap
+{
+  display: grid;
+  row-gap: 2.5rem;
+} */
 
 .skills__icon {
   margin-right: var(--mb-0-75);
@@ -478,72 +488,6 @@ img {
 .skills__arrow {
   margin-left: auto;
   transition: 0.4s;
-}
-
-.skills__list {
-  row-gap: 1.5rem;
-  padding-left: 2.7rem;
-}
-
-.skills__titles {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: var(--mb-0-5);
-}
-
-.skills__name {
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-}
-
-.skills__bar,
-.skills__percentage {
-  height: 5px;
-  border-radius: 0.25rem;
-}
-
-.skills__bar {
-  background-color: var(--first-color-lighter);
-}
-.skills__percentage {
-  display: block;
-  background-color: var(--first-color);
-}
-
-.skills__html {
-  width: 90%;
-}
-.skills__css {
-  width: 80%;
-}
-.skills__js {
-  width: 55%;
-}
-.skills__react {
-  width: 40%;
-}
-
-.skills__php {
-  width: 80%;
-}
-.skills__node {
-  width: 70%;
-}
-.skills__firebase {
-  width: 75%;
-}
-.skills__python {
-  width: 50%;
-}
-
-.skills__figma {
-  width: 85%;
-}
-.skills__sketch {
-  width: 75%;
-}
-.skills__photoshop {
-  width: 60%;
 }
 
 .skills__close .skills__list {
@@ -559,6 +503,153 @@ img {
 .skills__open .skills__arrow {
   transform: rotate(-180deg);
 }
+
+
+.tech__content {
+  background-color: var(--input-color);
+  border-left: 3px solid #06D001;
+  border-bottom: 4px solid #06D001;
+  border-radius: 15px;
+
+}
+
+.tech__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+/* Grid System */
+/* ----------- Grid System ----------- */
+/* Container that spans full width */
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Bootstrap row */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+/* Default (extra small) - 1 column per row */
+.custom-col {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Small screens (≥576px) - 2 columns per row */
+/* @media (min-width: 576px) {
+  .custom-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+} */
+
+/* Extra large screens (≥1200px) - 4 columns per row */
+/* @media (min-width: 1200px) {
+  .custom-col {
+    display: grid;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+} */
+
+/* Row class to wrap columns correctly */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+
+/* Margin top spacing */
+.mt-2 {
+  margin-top: 0.5rem; /* 8px */
+}
+
+/* Card styles */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid #028f00;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+/* Optional hover effect */
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Card content wrapper */
+.card-content {
+  flex: 1 1 auto;
+}
+
+/* Card padding */
+.card-body {
+  padding: 10px;
+}
+
+/* Flex container */
+.d-flex {
+  display: flex;
+}
+
+/* Justify content between */
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/* Align self center */
+.align-self-center {
+  align-self: center;
+
+}
+
+/* Media object (legacy style used in Bootstrap) */
+.media {
+  display: flex;
+  align-items: flex-start;
+  align-self: center;
+}
+
+.media-body {
+  flex: 1;
+}
+
+/* Align text to the right */
+.text-right {
+  text-align: right;
+  align-self: center;
+}
+
+.svg-icon {
+  width: 40px;
+  height: 40px; 
+  object-fit: contain;
+  display: block;
+}
+
 
 /*==================== Qualifications ====================*/
 
