@@ -146,7 +146,7 @@ window.addEventListener("scroll", scrollHeader);
 
 
 
-/*==================== SHOW SCROLL up ====================*/
+/*==================== SHOW SCROLL up =======================================*/
 function scrollUp()
 {
   const scrollUp = document.getElementById("scroll-up");
@@ -156,9 +156,11 @@ function scrollUp()
 }
 window.addEventListener("scroll", scrollUp);
 
-/*==================== DARK LIGHT THEME ====================*/
+
+
+/*==================== DARK LIGHT THEME =========================================*/
 const themeButton = document.getElementById("theme-button");
-const darkTheme = "dark-theme";
+const lightTheme = "light-theme";
 const iconTheme = "uil-sun";
 
 // Previously selected topic (if user selected)
@@ -167,27 +169,76 @@ const selectedIcon = localStorage.getItem("selected-icon");
 
 // We obtain the current theme that the interface has by validating the dark-theme class
 const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
+  document.body.classList.contains(lightTheme) ? "dark" : "light";
 const getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
 
 // We validate if the user previously chose a topic
-if (selectedTheme) {
+if (selectedTheme) 
+  {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme,
-  );
-  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-    iconTheme,
-  );
+  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](lightTheme,);
+  themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](iconTheme,);
+}else {
+  // ✅ Default to dark mode
+  document.body.classList.add(lightTheme);
+  themeButton.classList.add(iconTheme); // This will show the "sun" icon for toggling to light mode
 }
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener("click", () => {
   // Add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme);
+  document.body.classList.toggle(lightTheme);
   themeButton.classList.toggle(iconTheme);
   // We save the theme and the current icon that the user chose
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+});
+
+
+//----------------------------------skill-card---------------------------------------------------
+    // async function loadContent(file) {
+    //   const res = await fetch(file);
+    //   const html = await res.text();
+    //   document.getElementById('content').innerHTML = html;
+    // }
+
+    // // Initial load
+    // loadContent(document.querySelector('.tab.active').dataset.file);
+
+    // // Tab click handling
+    // document.querySelectorAll('.tab').forEach(tab => {
+    //   tab.addEventListener('click', () => {
+    //     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    //     tab.classList.add('active');
+    //     loadContent(tab.dataset.file);
+    //   });
+    // });
+
+    async function loadContent(file, targetId) {
+  const res = await fetch(file);
+  const html = await res.text();
+  document.getElementById(targetId).innerHTML = html;
+}
+
+document.querySelectorAll('.tabs').forEach(tabGroup => {
+  const targetId = tabGroup.dataset.target;
+
+  // Tab click handler
+  tabGroup.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      // Deactivate all tabs in this group
+      tabGroup.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Load content dynamically
+      loadContent(tab.dataset.file, targetId);
+    });
+  });
+
+  // Load default (active) tab on page load
+  const activeTab = tabGroup.querySelector('.tab.active');
+  if (activeTab) {
+    loadContent(activeTab.dataset.file, targetId);
+  }
 });
